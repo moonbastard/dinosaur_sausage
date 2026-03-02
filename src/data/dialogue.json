@@ -1,0 +1,101 @@
+{
+  "mainMenu": {
+    "title": "GasTown",
+    "subtitle": "A game about surviving Auschwitz-Birkenau\nMay 15, 1944 — January 27, 1945",
+    "contentWarning": "This game depicts the Holocaust with historical accuracy.\nIt includes descriptions of atrocity, forced complicity,\nand the moral cost of survival.\n\nIt is intended as interactive remembrance, not entertainment.",
+    "startButton": "Begin",
+    "continueButton": "Continue",
+    "aboutButton": "About"
+  },
+
+  "stats": {
+    "stamina": "Stamina",
+    "staminaDesc": "Physical capacity to continue. Restored by rations and rest.",
+    "usefulness": "Usefulness",
+    "usefulnessDesc": "Your value to your captors. Below 15, you risk selection.",
+    "dissociation": "Dissociation",
+    "dissociationDesc": "Psychological distance from your actions. Hidden from you during play.",
+    "rations": "Rations",
+    "rationsDesc": "Daily food allocation. More than most prisoners. Less than a human being requires.",
+    "daysSurvived": "Days Survived",
+    "liberationIn": "Liberation in {days} days"
+  },
+
+  "phases": {
+    "sonderkommando": {
+      "title": "Sonderkommando",
+      "subtitle": "May 15 — August 12, 1944",
+      "description": "Jewish prisoners assigned to the crematoria. A special kommando. A special hell."
+    },
+    "medical": {
+      "title": "Medical Assistant",
+      "subtitle": "August 12 — December 2, 1944",
+      "description": "Dr. Mengele's pathologist. Your expertise is your protection. Your protection is your prison."
+    },
+    "pathologist": {
+      "title": "Pathologist and Witness",
+      "subtitle": "December 2, 1944 — January 27, 1945",
+      "description": "You have survived long enough to become a witness. This is both more and less than it sounds."
+    }
+  },
+
+  "endings": {
+    "liberation_witness": {
+      "title": "Liberation: The Witness",
+      "text": "January 27, 1945. You hear Soviet voices.\n\nYou survived. Your Dissociation stayed low — you remained present for the horror, resisted where you could, documented everything.\n\nYou wrote your testimony. It was published. The world read it.\n\nYou spent forty years carrying what you had seen, and forty years making sure others would not look away.\n\nDr. Miklós Nyiszli died in 1956. His book was published in 1946.\nHis testimony is why we know what we know."
+    },
+    "liberation_empty": {
+      "title": "Liberation: The Empty",
+      "text": "January 27, 1945. You hear Soviet voices.\n\nYou survived. Your Dissociation was high — you learned to function without feeling. You were efficient. You endured.\n\nBut the self that survived is not the same self that arrived.\n\nYou struggle to write testimony. The words feel like they belong to someone else. Someone you buried somewhere between the spring and the winter.\n\nSurvival was the goal. You achieved it.\nThe cost is still being calculated."
+    },
+    "liberation_fighter": {
+      "title": "Liberation: The One Who Fought",
+      "text": "January 27, 1945. You hear Soviet voices.\n\nYou fought on October 7th. You resisted where you could. Your Dissociation is low — you stayed human at enormous cost.\n\nYou barely survived. There were many days when you almost didn't.\n\nBut when you write your testimony, the words come easily.\nYou know what you did. You know what you didn't do.\nThe ledger is not clean — no ledger from that place can be clean.\nBut it is yours, and you can account for every line.\n\nThis, perhaps, is the most you could have hoped for."
+    },
+    "death_selection": {
+      "title": "Selected",
+      "text": "Your usefulness dropped below the threshold that sustained you.\n\nYou were selected.\n\nThis happened to most of the Sonderkommando.\nThe three-month rotation was policy, not exception.\n\nOf approximately 2,200 Sonderkommando who served in\nAuschwitz-Birkenau, approximately 110 survived.\n\nTheir names are partially known.\nThe names of those who did not survive are mostly lost.\n\nRemember this when you wonder whether any individual choice\nin an impossible system could have mattered."
+    },
+    "death_starvation": {
+      "title": "Exhaustion",
+      "text": "Your body gave out.\n\nEven the Sonderkommando, who ate better than most prisoners,\ncould not sustain the physical demands of their forced labor indefinitely.\n\nYour body was a tool that was used until it broke.\n\nThis was policy."
+    }
+  },
+
+  "ui": {
+    "taskButton": "Perform Task",
+    "restButton": "Rest (+5 Stamina, -1 Usefulness)",
+    "journalButton": "Journal",
+    "upgradeButton": "Requests",
+    "dayHeader": "Day {day} of 257",
+    "phaseLabel": "Phase",
+    "nextTask": "Available Tasks",
+    "noTasks": "No tasks available",
+    "confirmChoice": "Confirm",
+    "cancelChoice": "Wait",
+    "eventTitle": "Event",
+    "journalTitle": "Testimony",
+    "journalEmpty": "No entries yet. Survive longer.",
+    "upgradeTitle": "Arrangements",
+    "upgradeUnlock": "Arrange",
+    "upgradeLocked": "Locked",
+    "upgradeAlreadyHave": "Arranged"
+  },
+
+  "deathWarnings": [
+    "Your usefulness is dangerously low. The next selection may find you.",
+    "Stamina critical. You cannot work. Without work, you have no value.",
+    "The SS have noticed your declining output."
+  ],
+
+  "dayMessages": [
+    { "day": 1, "text": "You have survived your first day." },
+    { "day": 7, "text": "One week. You no longer count hours." },
+    { "day": 30, "text": "One month. The transports continue." },
+    { "day": 89, "text": "The three-month selection approaches." },
+    { "day": 145, "text": "The revolt has happened. The camp is changed." },
+    { "day": 200, "text": "You can hear the guns to the east." },
+    { "day": 248, "text": "They are burning the records." },
+    { "day": 256, "text": "Tomorrow." }
+  ]
+}

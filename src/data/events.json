@@ -1,0 +1,391 @@
+{
+  "events": [
+    {
+      "id": "arrival_transport",
+      "title": "Transport Arrives",
+      "description": "A new transport has arrived. The platform fills with thousands of people from Hungary. You stand in the Birkenwald and watch.",
+      "trigger": { "type": "random", "weight": 20, "minDay": 1, "maxDay": 90 },
+      "choices": [
+        {
+          "id": "process",
+          "label": "Carry out your duties",
+          "effect": {
+            "usefulness": 12,
+            "stamina": -8,
+            "dissociation": 3,
+            "rations": 0
+          },
+          "outcome": "You work efficiently. The SS guard nods approvingly.",
+          "journalEntry": "I told myself: I am already dead. Only my body has not yet understood this."
+        },
+        {
+          "id": "slow",
+          "label": "Move slowly, find small delays",
+          "effect": {
+            "usefulness": 5,
+            "stamina": -5,
+            "dissociation": -2,
+            "rations": 0
+          },
+          "outcome": "Small acts of resistance are all that remain of you. A guard notices your pace.",
+          "journalEntry": "A few seconds of hesitation. A few seconds of being human."
+        }
+      ]
+    },
+    {
+      "id": "selection_day",
+      "title": "Selection",
+      "description": "The SS are conducting a selection of Sonderkommando. After three months, they typically liquidate the kommando and bring in fresh prisoners. Your usefulness is being evaluated.",
+      "trigger": { "type": "day", "day": 89 },
+      "choices": [
+        {
+          "id": "demonstrate_skill",
+          "label": "Demonstrate your specialized knowledge",
+          "effect": {
+            "usefulness": 25,
+            "stamina": -5,
+            "dissociation": 5,
+            "rations": 2
+          },
+          "outcome": "Your expertise makes you too valuable to liquidate. You survive another rotation.",
+          "journalEntry": "The man next to me was selected. I was not. I could not look at his face."
+        }
+      ]
+    },
+    {
+      "id": "mengele_summons",
+      "title": "Dr. Mengele Summons You",
+      "description": "The Lagerarzt has heard of your medical training. You are brought to his office. He speaks to you as a colleague — which is its own kind of horror.",
+      "trigger": { "type": "day", "day": 91 },
+      "choices": [
+        {
+          "id": "accept",
+          "label": "Accept the role of medical assistant",
+          "effect": {
+            "usefulness": 30,
+            "stamina": 10,
+            "dissociation": 8,
+            "rations": 2
+          },
+          "outcome": "You become Dr. Mengele's pathologist. Your survival odds improve dramatically. The cost is harder to measure.",
+          "journalEntry": "He shook my hand. I felt nothing — which frightened me more than feeling everything had."
+        }
+      ]
+    },
+    {
+      "id": "twins_brought",
+      "title": "Twins Brought for Examination",
+      "description": "Two children, twins, are brought to the laboratory. They look at you with trusting eyes. Dr. Mengele instructs you to proceed with measurements and documentation.",
+      "trigger": { "type": "random", "weight": 15, "minDay": 91, "maxDay": 210 },
+      "choices": [
+        {
+          "id": "comply",
+          "label": "Comply fully with documentation",
+          "effect": {
+            "usefulness": 10,
+            "stamina": -3,
+            "dissociation": 8,
+            "rations": 0
+          },
+          "outcome": "The data is recorded. The children are returned to the barracks temporarily.",
+          "journalEntry": "I wrote numbers. I told myself numbers are not children. This is how I survived."
+        },
+        {
+          "id": "minimize",
+          "label": "Complete minimum required, find small mercies",
+          "effect": {
+            "usefulness": 5,
+            "stamina": -5,
+            "dissociation": -3,
+            "rations": 0
+          },
+          "outcome": "You give one child a piece of bread from your ration. It vanishes in seconds. You note nothing extraordinary in your report.",
+          "journalEntry": "One small piece of bread. I do not know if it helped. I know it was all I could give."
+        }
+      ]
+    },
+    {
+      "id": "prisoner_revolt_buildup",
+      "title": "Whispers in the Krematorium",
+      "description": "The Sonderkommando have been organizing. Roza Robota and the women from the Pulverraum have been smuggling gunpowder. They ask if you will join.",
+      "trigger": { "type": "day", "day": 130 },
+      "choices": [
+        {
+          "id": "join_conspiracy",
+          "label": "Agree to help",
+          "effect": {
+            "usefulness": -5,
+            "stamina": -5,
+            "dissociation": -15,
+            "rations": 0
+          },
+          "outcome": "You begin passing information. The risk is enormous. For the first time in months, you feel like yourself.",
+          "journalEntry": "To act, even knowing it cannot save us — this is what remains of human dignity."
+        },
+        {
+          "id": "refuse_fear",
+          "label": "Decline — the risk is too great",
+          "effect": {
+            "usefulness": 0,
+            "stamina": 3,
+            "dissociation": 5,
+            "rations": 0
+          },
+          "outcome": "You say nothing. They nod. They understand. You are not sure you understand yourself.",
+          "journalEntry": "Fear is not cowardice when you are the last witness. I told myself this."
+        }
+      ]
+    },
+    {
+      "id": "sonderkommando_revolt",
+      "title": "October 7, 1944",
+      "description": "Krematorium IV is on fire. The Sonderkommando of Krematorium IV have attacked the guards with tools, their bare hands, the gunpowder they saved. The explosion shakes the camp. You have perhaps one minute to decide.",
+      "trigger": { "type": "day", "day": 145 },
+      "choices": [
+        {
+          "id": "fight",
+          "label": "Take up a tool and join the revolt",
+          "effect": {
+            "usefulness": -40,
+            "stamina": -20,
+            "dissociation": -25,
+            "rations": 0
+          },
+          "outcome": "You fight. The revolt fails. You survive by hiding — 250 of your comrades do not. But you fought. The ledger of what you did is different now.",
+          "journalEntry": "We knew we would not escape. We fought so that someone, somewhere, would know we were not only victims."
+        },
+        {
+          "id": "hide",
+          "label": "Hide and survive",
+          "effect": {
+            "usefulness": 5,
+            "stamina": -10,
+            "dissociation": 10,
+            "rations": 0
+          },
+          "outcome": "You survive. 250 are shot in the aftermath. The SS hang Roza Robota publicly. You watch.",
+          "journalEntry": "I watched Roza Robota walk to the gallows. She called out: 'Be strong and brave.' She was stronger than all of us."
+        }
+      ]
+    },
+    {
+      "id": "document_atrocities",
+      "title": "The Documentation",
+      "description": "As camp pathologist, you have unique access to records that could serve as evidence. The Sonderkommando are burying manuscripts in the ground near Krematorium III — documents for the future.",
+      "trigger": { "type": "random", "weight": 20, "minDay": 211, "maxDay": 257 },
+      "choices": [
+        {
+          "id": "document",
+          "label": "Add your findings to the hidden archive",
+          "effect": {
+            "usefulness": -5,
+            "stamina": -5,
+            "dissociation": -10,
+            "rations": 0
+          },
+          "outcome": "You bury pages beside those of Zalman Gradowski and Salmen Lewental. Whatever happens to you, this may survive.",
+          "journalEntry": "I wrote for those who would come after. I wrote so the world could not say it did not know."
+        },
+        {
+          "id": "memorize",
+          "label": "Memorize everything — safer to carry it in your mind",
+          "effect": {
+            "usefulness": 0,
+            "stamina": -3,
+            "dissociation": -5,
+            "rations": 0
+          },
+          "outcome": "You commit everything to memory. Your mind is an archive now. You pray your body will survive to deliver it.",
+          "journalEntry": "A mind that witnesses is the most fragile archive and the most durable one."
+        }
+      ]
+    },
+    {
+      "id": "death_march_order",
+      "title": "The Camp is Evacuating",
+      "description": "January 17, 1945. The SS are burning records. Prisoners are being marched west. You can hear the Soviet artillery to the east. The question is whether to march or hide.",
+      "trigger": { "type": "day", "day": 248 },
+      "choices": [
+        {
+          "id": "hide_in_camp",
+          "label": "Hide in the camp and wait for liberation",
+          "effect": {
+            "usefulness": -20,
+            "stamina": -15,
+            "dissociation": -10,
+            "rations": -3
+          },
+          "outcome": "You find a hiding place. The next ten days are the hungriest of your life. On January 27, you hear Soviet voices.",
+          "journalEntry": "I lay in the dark and listened to them burn the evidence. I was evidence they could not burn."
+        }
+      ]
+    },
+    {
+      "id": "allied_bombing",
+      "title": "Allied Aircraft",
+      "description": "American bombers pass overhead. The camp sirens sound. For a moment, the machinery stops.",
+      "trigger": { "type": "random", "weight": 8, "minDay": 1, "maxDay": 200 },
+      "choices": [
+        {
+          "id": "watch",
+          "label": "Watch from the doorway",
+          "effect": {
+            "usefulness": 0,
+            "stamina": 5,
+            "dissociation": -5,
+            "rations": 0
+          },
+          "outcome": "The planes do not bomb the tracks. They do not bomb the Krematorium. You knew they wouldn't. You needed to watch anyway.",
+          "journalEntry": "We saw them and waved. They saw us, or didn't. The Krematorium kept running."
+        }
+      ]
+    },
+    {
+      "id": "ss_inspection",
+      "title": "SS Inspection",
+      "description": "A senior SS officer is touring the facility. Everything must appear efficient and orderly.",
+      "trigger": { "type": "random", "weight": 12, "minDay": 10, "maxDay": 240 },
+      "choices": [
+        {
+          "id": "perform_efficiency",
+          "label": "Demonstrate the operation's efficiency",
+          "effect": {
+            "usefulness": 15,
+            "stamina": -5,
+            "dissociation": 6,
+            "rations": 1
+          },
+          "outcome": "The officer is satisfied. You are rewarded with an extra ration. The performance is complete.",
+          "journalEntry": "I showed him everything he wanted to see. This is what survival required of me."
+        },
+        {
+          "id": "subtle_obstruction",
+          "label": "Create minor inefficiencies, unseen",
+          "effect": {
+            "usefulness": 8,
+            "stamina": -5,
+            "dissociation": -4,
+            "rations": 0
+          },
+          "outcome": "A stuck mechanism. A mislaid form. Small sabotage, almost invisible. Almost.",
+          "journalEntry": "Resistance does not require a weapon. Sometimes a stuck bolt is enough to remember who you are."
+        }
+      ]
+    },
+    {
+      "id": "prisoner_who_knew",
+      "title": "A Prisoner Who Knew You",
+      "description": "Among the people who arrived today, you recognize a man from your city. He sees you in your Sonderkommando uniform. His expression moves through confusion, recognition, horror.",
+      "trigger": { "type": "random", "weight": 5, "minDay": 5, "maxDay": 200 },
+      "choices": [
+        {
+          "id": "look_away",
+          "label": "Look away",
+          "effect": {
+            "usefulness": 0,
+            "stamina": -8,
+            "dissociation": 5,
+            "rations": 0
+          },
+          "outcome": "You look away. You do not know if he understood. You carry his expression for the rest of your life.",
+          "journalEntry": "I could not explain. I cannot explain now. The look he gave me — I will carry it to my grave."
+        },
+        {
+          "id": "speak_briefly",
+          "label": "Speak briefly — give him what truth you can",
+          "effect": {
+            "usefulness": -5,
+            "stamina": -10,
+            "dissociation": -8,
+            "rations": 0
+          },
+          "outcome": "You find two seconds. 'Do not resist during selection — it will not help. Your children first — keep them calm.' Whether this helped, you will never know.",
+          "journalEntry": "Two seconds. Maybe they mattered. Maybe nothing I did mattered. But two seconds was all I had to give."
+        }
+      ]
+    },
+    {
+      "id": "extra_rations_found",
+      "title": "Hidden Food",
+      "description": "In the clothing of the recently arrived, you find a hidden package of food — bread, fat, sugar. More than you could eat in days.",
+      "trigger": { "type": "random", "weight": 10, "minDay": 1, "maxDay": 257 },
+      "choices": [
+        {
+          "id": "keep",
+          "label": "Keep it for yourself",
+          "effect": {
+            "usefulness": 0,
+            "stamina": 25,
+            "dissociation": 3,
+            "rations": 5
+          },
+          "outcome": "You eat in secret. Your body thanks you. You do not think about whose hands packed this.",
+          "journalEntry": "Survival has no elegance. I ate. I survived. That is all."
+        },
+        {
+          "id": "share",
+          "label": "Share with the weakest in the kommando",
+          "effect": {
+            "usefulness": 0,
+            "stamina": 10,
+            "dissociation": -8,
+            "rations": 2
+          },
+          "outcome": "You share quietly. Two men who were near collapse regain enough strength to work another week.",
+          "journalEntry": "I gave away more than I kept. This is the only part of those months I can narrate without shame."
+        }
+      ]
+    }
+  ],
+
+  "journalUnlocks": [
+    {
+      "day": 1,
+      "text": "My name is Dr. Miklós Nyiszli. I arrived at Auschwitz-Birkenau on May 15, 1944, with a transport of 15,000 Hungarian Jews. I am a forensic pathologist. This is the fact that kept me alive. This is the fact I have never been able to forgive."
+    },
+    {
+      "day": 7,
+      "text": "The Sonderkommando are Jewish prisoners assigned to the crematoria. They know they will be killed after three months — replaced by fresh prisoners who have not had time to learn what they now know. They live better than anyone else in the camp. They live worse than anyone in the world."
+    },
+    {
+      "day": 14,
+      "text": "Dr. Mengele calls me 'colleague.' He shows genuine enthusiasm for his work. He is brilliant, cultured, and operates without any moral category that I can identify. I have decided that evil is not always recognizable by its appearance."
+    },
+    {
+      "day": 30,
+      "text": "I have begun writing. I do not know who will read this. I write in the knowledge that I may be shot tomorrow, and in the hope that these pages will survive me. If you are reading this, you are the reason I wrote it."
+    },
+    {
+      "day": 60,
+      "text": "The Hungarian transports have mostly ended. We processed 437,000 people in 56 days. I know this number precisely. Knowing it precisely is the only form of witness I could provide."
+    },
+    {
+      "day": 90,
+      "text": "Three months. The other Sonderkommando expected selection. I was not selected — Mengele protects his pathologist. I do not know what I feel about surviving when they did not."
+    },
+    {
+      "day": 120,
+      "text": "The Sonderkommando of Krematorium IV have been organizing. I hear this. I know I should say nothing. I say nothing. I tell myself this is wisdom. I do not entirely believe it."
+    },
+    {
+      "day": 145,
+      "text": "October 7, 1944. The revolt. 250 prisoners killed in the reprisals. Roza Robota was hanged on January 6, 1945. Before she died, she passed a note: 'Be strong and brave.' I have remembered this every day since."
+    },
+    {
+      "day": 180,
+      "text": "We hear the Soviet guns. Distant, but real. For the first time since my arrival, I believe it is possible that I might live. I do not know what living will mean, after this."
+    },
+    {
+      "day": 220,
+      "text": "The camp is changing. The SS are beginning to destroy evidence. They burn records. They do not burn the Krematorium — they still need it. But the end is beginning."
+    },
+    {
+      "day": 248,
+      "text": "January 17, 1945. The death marches begin. Thousands of prisoners are driven west into the winter. I hide. Ten days in the dark. On January 27, I hear voices speaking Russian."
+    },
+    {
+      "day": 257,
+      "text": "Liberation. January 27, 1945. The Soviet soldiers who entered the camp could not speak. They had no words for what they found. Neither do I. But I survived to testify, and I have spent the rest of my life doing so."
+    }
+  ]
+}

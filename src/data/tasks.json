@@ -1,0 +1,179 @@
+{
+  "tasks": [
+    {
+      "id": "body_removal",
+      "phase": "sonderkommando",
+      "title": "Body Removal",
+      "description": "Clear the gas chambers after each operation.",
+      "usefulnessGain": 8,
+      "staminaCost": 12,
+      "dissociationGain": 4,
+      "timeRequired": 2,
+      "unlocked": true
+    },
+    {
+      "id": "belongings_sorting",
+      "phase": "sonderkommando",
+      "title": "Belongings Sorting",
+      "description": "Sort clothing, valuables, and documents from the arriving transports.",
+      "usefulnessGain": 6,
+      "staminaCost": 7,
+      "dissociationGain": 3,
+      "timeRequired": 1,
+      "unlocked": true
+    },
+    {
+      "id": "hair_processing",
+      "phase": "sonderkommando",
+      "title": "Hair Processing",
+      "description": "The hair is used for industrial purposes. You have learned not to think about this.",
+      "usefulnessGain": 5,
+      "staminaCost": 5,
+      "dissociationGain": 5,
+      "timeRequired": 1,
+      "unlocked": true
+    },
+    {
+      "id": "maintenance",
+      "phase": "sonderkommando",
+      "title": "Krematorium Maintenance",
+      "description": "Keep the facility operational. The SS demand efficiency above all.",
+      "usefulnessGain": 10,
+      "staminaCost": 8,
+      "dissociationGain": 2,
+      "timeRequired": 2,
+      "unlocked": true
+    },
+    {
+      "id": "platform_duty",
+      "phase": "sonderkommando",
+      "title": "Platform Duty",
+      "description": "Direct arriving prisoners. Your presence reassures them. This is by design.",
+      "usefulnessGain": 7,
+      "staminaCost": 6,
+      "dissociationGain": 6,
+      "timeRequired": 1,
+      "unlocked": true
+    },
+    {
+      "id": "autopsies",
+      "phase": "medical",
+      "title": "Pathological Autopsies",
+      "description": "Document the effects of experiments and conditions. Your findings go to Berlin.",
+      "usefulnessGain": 15,
+      "staminaCost": 8,
+      "dissociationGain": 5,
+      "timeRequired": 3,
+      "unlocked": false
+    },
+    {
+      "id": "specimen_preparation",
+      "phase": "medical",
+      "title": "Specimen Preparation",
+      "description": "Prepare specimens for Mengele's anatomical studies.",
+      "usefulnessGain": 12,
+      "staminaCost": 6,
+      "dissociationGain": 6,
+      "timeRequired": 2,
+      "unlocked": false
+    },
+    {
+      "id": "selection_assistance",
+      "phase": "medical",
+      "title": "Medical Selection Assistance",
+      "description": "Assist with the medical assessment portion of selection. Your role is clinical documentation.",
+      "usefulnessGain": 18,
+      "staminaCost": 10,
+      "dissociationGain": 9,
+      "timeRequired": 2,
+      "unlocked": false
+    },
+    {
+      "id": "experiment_records",
+      "phase": "medical",
+      "title": "Experiment Documentation",
+      "description": "Record results from the twin studies and other research. Your medical expertise makes you essential.",
+      "usefulnessGain": 14,
+      "staminaCost": 7,
+      "dissociationGain": 7,
+      "timeRequired": 2,
+      "unlocked": false
+    },
+    {
+      "id": "mass_documentation",
+      "phase": "pathologist",
+      "title": "Mass Mortality Documentation",
+      "description": "The scale defies any medical framework you were trained in. You document it anyway.",
+      "usefulnessGain": 20,
+      "staminaCost": 10,
+      "dissociationGain": 4,
+      "timeRequired": 3,
+      "unlocked": false
+    },
+    {
+      "id": "evidence_preservation",
+      "phase": "pathologist",
+      "title": "Evidence Preservation",
+      "description": "Quietly preserve records that could serve as post-war evidence. Risk: moderate.",
+      "usefulnessGain": 8,
+      "staminaCost": 5,
+      "dissociationGain": -8,
+      "timeRequired": 2,
+      "unlocked": false
+    },
+    {
+      "id": "hidden_chronicle",
+      "phase": "pathologist",
+      "title": "Write the Chronicle",
+      "description": "Your testimony, written and hidden with the manuscripts buried near Krematorium III.",
+      "usefulnessGain": 0,
+      "staminaCost": 8,
+      "dissociationGain": -12,
+      "timeRequired": 3,
+      "unlocked": false
+    }
+  ],
+
+  "upgrades": [
+    {
+      "id": "extra_ration",
+      "title": "Extra Ration Allocation",
+      "description": "Your value to the SS has earned an additional daily ration.",
+      "cost": 30,
+      "effect": { "dailyRationsBonus": 1 },
+      "requires": "usefulness >= 40"
+    },
+    {
+      "id": "better_quarters",
+      "title": "Improved Barracks Assignment",
+      "description": "Better sleep means better work. The SS care only about the second part.",
+      "cost": 40,
+      "effect": { "staminaRecoveryBonus": 5 },
+      "requires": "usefulness >= 50"
+    },
+    {
+      "id": "medical_knowledge",
+      "title": "Applied Medical Knowledge",
+      "description": "Your professional training increases your efficiency and value.",
+      "cost": 25,
+      "effect": { "usefulnessDecayReduction": 1 },
+      "requires": "phase >= medical"
+    },
+    {
+      "id": "dissociation_mastery",
+      "title": "Compartmentalization",
+      "description": "You have learned to partition your mind. The cost of this skill is hidden for now.",
+      "cost": 20,
+      "effect": { "staminaCostReduction": 2 },
+      "requires": "dissociation >= 40"
+    },
+    {
+      "id": "witness_purpose",
+      "title": "The Witness Mandate",
+      "description": "You survive to testify. This purpose steadies you.",
+      "cost": 35,
+      "effect": { "dissociationDecayBonus": 3 },
+      "requires": "day >= 100"
+    }
+  ]
+}
